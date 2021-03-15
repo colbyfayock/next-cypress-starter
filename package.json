@@ -3,13 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "build": "next build",
+    "dev": "next dev",
+    "test:open": "start-server-and-test dev http://localhost:3000 cy:open",
+    "test:run": "start-server-and-test dev http://localhost:3000 cy:run",
     "start": "next start"
   },
   "dependencies": {
     "next": "10.0.9",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "cypress": "^6.7.0",
+    "start-server-and-test": "^1.12.0"
   }
 }
